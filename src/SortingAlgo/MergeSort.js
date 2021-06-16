@@ -22,9 +22,7 @@ function merge(tempArray, start, mid, end, animations) {
     let i = start;
     let j = mid + 1;
     while(i <= mid && j <= end) {
-        //Comparing value at ith and jth index so push them to change their color
         animations.push(["comparison1", i, j]);
-        //By changing color we imply that we are comparing those two values and then again we should revert back to their original color so push them again
         animations.push(["comparison2", i, j]);
         if(tempArray[i] <= tempArray[j]) {
             sortArray.push(tempArray[i++]);
